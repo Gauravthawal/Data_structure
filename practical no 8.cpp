@@ -7,7 +7,7 @@ using namespace std;
       struct node *next;
 };
 class info
-{        node *s=NULL,*head1=NULL,*temp1=NULL,*head2=NULL,*temp2=NULL,*head=NULL,*temp=NULL;
+{        node *s=NULL,*head=NULL,*temp=NULL;
         int b,c,i,j,ct;
         char a[20];
         public:
@@ -49,11 +49,10 @@ node *info::create()
     else
     {      temp=head;
           while(temp->next!=NULL)
-          {    temp=temp->next;  
-		   }
+          {    temp=temp->next; 
+		    }
               temp->next=p;
      }        
-     
          
    }
      void info::insertp()
@@ -81,7 +80,7 @@ node *info::create()
                 temp=head;
                           cout<<"     prn     rolln0    NAME   \n";
                           while(temp->next!=NULL)
-                          {     cout<<"    \n"<<temp->prn<<"    "<<temp->rollno<<"    "<<temp->name ;
+                          {     cout<<"    \n"<<temp->prn<<"    "<<temp->rollno<<"    "<<temp->name;
                                 temp=temp->next;
                           }
                          cout<<"    "<<temp->prn<<"    "<<temp->rollno<<"    "<<temp->name;
@@ -112,8 +111,7 @@ node *info::create()
   {   
       temp=head;
       while(temp->next!=NULL)
-      {  
-	   s=temp;
+      {   s=temp;
       temp=temp->next;
       }     s->next=NULL;
          delete(temp);
@@ -169,18 +167,10 @@ node *info::create()
                                                                    
                   default:  cout<<"\n unknown choice";
           }
-			cout<<"\n do you want to continue enter y/n \n";
+            cout<<"\n do you want to continue enter y/n \n";
             cin>>ch;
        
-       }while(ch=='y'||ch=='Y');  
+       }while(ch=='y'||ch=='Y');                                                                                                   
                      
    return 0;
  }
-
-
-
-
-
-
-
-
